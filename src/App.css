@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: hsl(36 33% 96%); /* warm cream */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* teal glow */
+.logo:hover {
+  filter: drop-shadow(0 0 2em hsl(176 45% 36% / 0.6));
+}
+
+/* coral accent for react logo */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em hsl(11 78% 58% / 0.65));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  background-color: hsl(35 40% 98%); /* soft card white */
+  color: hsl(176 42% 18%);          /* deep teal text */
+  border-radius: 1rem;
+}
+
+/* muted food-friendly text */
+.read-the-docs {
+  color: hsl(35 12% 45%);
+}
+

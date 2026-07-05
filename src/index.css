@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Refined Food Ordering Design System
+   Inspired by warm cream backgrounds, teal hero sections,
+   coral snack accents, and toasted orange highlights
+*/
+
+@layer base {
+  :root {
+    /* Core surfaces */
+    --background: 36 33% 96%;          /* warm cream */
+    --foreground: 176 42% 18%;         /* deep teal text */
+
+    --card: 35 40% 98%;                /* soft paper white */
+    --card-foreground: 176 42% 18%;
+
+    --popover: 35 40% 98%;
+    --popover-foreground: 176 42% 18%;
+
+    /* Brand colors */
+    --primary: 176 45% 36%;             /* muted teal (hero sections) */
+    --primary-foreground: 35 40% 97%;
+
+    --secondary: 28 88% 55%;            /* snack orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 11 78% 58%;               /* coral CTA */
+    --accent-foreground: 0 0% 100%;
+
+    /* Utility tones */
+    --muted: 35 22% 90%;
+    --muted-foreground: 35 12% 45%;
+
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 22% 86%;
+    --input: 35 22% 86%;
+    --ring: 176 45% 36%;
+
+    --radius: 1.1rem;
+
+    /* Custom food palette */
+    --teal-light: 176 45% 82%;
+    --coral: 11 78% 58%;
+    --peach: 28 88% 72%;
+    --cream: 36 33% 96%;
+    --warm-white: 35 45% 99%;
+
+    /* Sidebar */
+    --sidebar-background: 35 45% 98%;
+    --sidebar-foreground: 176 42% 18%;
+    --sidebar-primary: 176 45% 36%;
+    --sidebar-primary-foreground: 35 45% 99%;
+    --sidebar-accent: 35 28% 92%;
+    --sidebar-accent-foreground: 176 42% 18%;
+    --sidebar-border: 35 22% 86%;
+    --sidebar-ring: 176 45% 36%;
+  }
+
+  .dark {
+    --background: 176 42% 14%;
+    --foreground: 35 40% 96%;
+
+    --card: 176 34% 18%;
+    --card-foreground: 35 40% 96%;
+
+    --popover: 176 34% 18%;
+    --popover-foreground: 35 40% 96%;
+
+    --primary: 176 45% 55%;
+    --primary-foreground: 176 42% 14%;
+
+    --secondary: 28 88% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 11 78% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 176 22% 25%;
+    --muted-foreground: 35 20% 70%;
+
+    --destructive: 0 65% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 176 22% 28%;
+    --input: 176 22% 28%;
+    --ring: 176 45% 55%;
+
+    --sidebar-background: 176 42% 14%;
+    --sidebar-foreground: 35 40% 96%;
+    --sidebar-primary: 176 45% 55%;
+    --sidebar-primary-foreground: 176 42% 14%;
+    --sidebar-accent: 176 22% 25%;
+    --sidebar-accent-foreground: 35 40% 96%;
+    --sidebar-border: 176 22% 28%;
+    --sidebar-ring: 176 45% 55%;
+
+    --teal-light: 176 45% 35%;
+    --coral: 11 78% 55%;
+    --peach: 28 88% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .torn-edge {
+    position: relative;
+  }
+
+  .torn-edge::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 22px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 22' preserveAspectRatio='none'%3E%3Cpath d='M0,12 Q40,2 80,12 T160,12 T240,12 T320,12 T400,12 T480,12 T560,12 T640,12 T720,12 T800,12 T880,12 T960,12 T1040,12 T1120,12 L1200,12 L1200,22 L0,22 Z' fill='%23F6F2EA'/%3E%3C/svg%3E") repeat-x;
+    background-size: 80px 22px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
